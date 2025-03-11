@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    
+    <!-- Mute/Unmute Music Button -->
+    <button id="mute-button">🔊 Mute</button>
+
+    <div id="game-board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    
+    <div id="status">Player X's Turn</div>
+    <button id="reset">Restart Game</button>
+    <footer><div class="yo">DEVELOPED BY Nikhil</div></footer>
+  </div>
+
+  <!-- Add game sounds -->
+  <audio id="bg-music" loop>
+    <source src="background.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="click-sound">
+    <source src="click.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

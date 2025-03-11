@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    width: 340px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Game Board */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: #f9e795;
+    color: #d11717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .cell:hover {
+    transform: scale(1.1);
+    background: #444;
+    color: white;
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  /* Winning Cell Animation */
+  @keyframes winEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); background: #4CAF50; color: white; }
+    100% { transform: scale(1); }
+  }
+  
+  /* Status Text */
+  #status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Reset Button */
+  button {
+    background: #ff5722;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+  
+  /* Footer */
+  .yo {
+    font-size: 1rem;
+    color: #ebf597;
+    padding: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 450px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .cell {
+      width: 80px;
+      height: 80px;
+      font-size: 2rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #status {
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  
